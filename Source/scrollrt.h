@@ -50,6 +50,7 @@ void DoBlitScreen(DWORD dwX, DWORD dwY, DWORD dwWdt, DWORD dwHgt);
 void DrawAndBlit();
 
 void HighlightItemsNameOnMap();
+void DrawMonsterHealthBar(int monsterID);
 /* rdata */
 
 /* data */

@@ -989,6 +989,10 @@ void T_DrawView(int StartX, int StartY)
 		gmenu_draw_pause();
 	}
 
+	if (pcursmonst != -1) {
+		DrawMonsterHealthBar(pcursmonst);
+	}
+
 	DrawPlrMsg();
 	gmenu_draw();
 	doom_draw();

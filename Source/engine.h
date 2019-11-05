@@ -120,6 +120,9 @@ void Cl2DecDatLightTbl2(BYTE *pDecodeTo, BYTE *pRLEBytes, int nDataSize, int nWi
 void Cl2DecodeFrm6(int sx, int sy, BYTE *pCelBuff, int nCel, int nWidth, int CelSkip, int CelCap);
 void PlayInGameMovie(char *pszMovie);
 
+void DrawSolidRectangle(int x0, int dx, int y0, int dy, int color);
+int CalculateTextWidth(char* s);
+
 /* rdata */
 
 extern const int RndInc;

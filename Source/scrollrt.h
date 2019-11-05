@@ -49,6 +49,7 @@ void DrawFPS();
 void DoBlitScreen(DWORD dwX, DWORD dwY, DWORD dwWdt, DWORD dwHgt);
 void DrawAndBlit();
 
+void HighlightItemsNameOnMap();
 /* rdata */
 
 /* data */

@@ -956,6 +956,10 @@ void T_DrawView(int StartX, int StartY)
 
 	DrawDurIcon();
 
+	if (drawitems) {
+		HighlightItemsNameOnMap();
+	}
+
 	if (chrflag) {
 		DrawChr();
 	} else if (questlog) {

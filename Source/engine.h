@@ -80,7 +80,7 @@ void Cl2BlitLightSafe(BYTE *pDecodeTo, BYTE *pRLEBytes, int nDataSize, int nWidt
 void PlayInGameMovie(char *pszMovie);
 
 void DrawSolidRectangle(int x0, int dx, int y0, int dy, int color);
-int CalculateTextWidth(char* s);
+int CalculateTextWidth(const char* s);
 
 /* rdata */
 

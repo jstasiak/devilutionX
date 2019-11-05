@@ -2089,7 +2089,7 @@ void DrawSolidRectangle(int x0, int dx, int y0, int dy, int color) {
 	}
 }
 
-int CalculateTextWidth(char* s)
+int CalculateTextWidth(const char* s)
 {
 	int l = 0;
 	while (*s) {

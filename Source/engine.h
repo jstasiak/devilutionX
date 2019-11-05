@@ -79,6 +79,9 @@ void Cl2BlitOutlineSafe(BYTE *pDecodeTo, BYTE *pRLEBytes, int nDataSize, int nWi
 void Cl2BlitLightSafe(BYTE *pDecodeTo, BYTE *pRLEBytes, int nDataSize, int nWidth, BYTE *pTable);
 void PlayInGameMovie(char *pszMovie);
 
+void DrawSolidRectangle(int x0, int dx, int y0, int dy, int color);
+int CalculateTextWidth(char* s);
+
 /* rdata */
 
 extern const int RndInc;

@@ -926,7 +926,8 @@ void DrawView(int StartX, int StartY)
 		gmenu_draw_pause();
 	}
 
-	if (pcursmonst != -1) {
+
+	if (leveltype != DTYPE_TOWN && pcursmonst != -1) {
 		DrawMonsterHealthBar(pcursmonst);
 	}
 	DrawPlrMsg();

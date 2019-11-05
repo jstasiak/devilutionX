@@ -23,6 +23,7 @@ void EnableFrameCount();
 void scrollrt_draw_game_screen(BOOL draw_cursor);
 void DrawAndBlit();
 
+void HighlightItemsNameOnMap();
 /* rdata */
 
 /* data */

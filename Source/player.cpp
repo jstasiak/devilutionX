@@ -2551,6 +2551,10 @@ BOOL PlrHitPlr(int pnum, char p)
 	BOOL rv;
 	int hit, hper, blk, blkper, dir, mind, maxd, dam, lvl, skdam, tac;
 
+	if (FriendlyMode) {
+		return FALSE;
+	}
+
 	if ((DWORD)p >= MAX_PLRS) {
 		app_fatal("PlrHitPlr: illegal target player %d", p);
 	}

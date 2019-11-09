@@ -817,7 +817,7 @@ void AddPlrExperience(int pnum, int lvl, int exp)
 
 void AddPlrMonstExper(int lvl, int exp, char pmask)
 {
-	int totplrs, i, e;
+	int totplrs, i;
 
 	totplrs = 0;
 	for (i = 0; i < MAX_PLRS; i++) {
@@ -827,9 +827,7 @@ void AddPlrMonstExper(int lvl, int exp, char pmask)
 	}
 
 	if (totplrs) {
-		e = exp / totplrs;
-		if (pmask & (1 << myplr))
-			AddPlrExperience(myplr, lvl, e);
+		AddPlrExperience(myplr, lvl, exp);
 	}
 }
 

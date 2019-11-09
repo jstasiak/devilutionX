@@ -3,6 +3,9 @@
 
 DEVILUTION_BEGIN_NAMESPACE
 
+//disable game end when Diablo killed
+#define DISABLE_DIABLO_END TRUE
+
 // Tracks which missile files are already loaded
 int MissileFileFlag;
 
@@ -1656,7 +1659,7 @@ void MonstStartKill(int i, int pnum, BOOL sendmsg)
 	} else if (i > 3) {
 		SpawnItem(i, monster[i]._mx, monster[i]._my, sendmsg);
 	}
-	if (monster[i].MType->mtype == MT_DIABLO)
+	if (monster[i].MType->mtype == MT_DIABLO && !DISABLE_DIABLO_END)
 		M_DiabloDeath(i, TRUE);
 	else
 		PlayEffect(i, 2);
@@ -1711,7 +1714,7 @@ void M2MStartKill(int i, int mid)
 	if (mid >= MAX_PLRS)
 		SpawnItem(mid, monster[mid]._mx, monster[mid]._my, TRUE);
 
-	if (monster[mid].MType->mtype == MT_DIABLO)
+	if (monster[mid].MType->mtype == MT_DIABLO && !DISABLE_DIABLO_END)
 		M_DiabloDeath(mid, TRUE);
 	else
 		PlayEffect(i, 2);
@@ -2604,7 +2607,7 @@ BOOL M_DoDeath(int i)
 
 	monster[i]._mVar1++;
 	var1 = monster[i]._mVar1;
-	if (monster[i].MType->mtype == MT_DIABLO) {
+	if (monster[i].MType->mtype == MT_DIABLO && !DISABLE_DIABLO_END) {
 		x = monster[i]._mx - ViewX;
 		if (x < 0)
 			x = -1;
